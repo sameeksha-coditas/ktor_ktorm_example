@@ -1,4 +1,4 @@
-package com.example.models
+package com.example.entities
 
 import org.ktorm.schema.Table
 import org.ktorm.schema.int
@@ -9,4 +9,5 @@ object User : Table<Nothing>("user") {
     val name = varchar("name")
     val email = varchar("email")
     val phoneNo = varchar("phoneNo")
+    val password =varchar("password")
 }
