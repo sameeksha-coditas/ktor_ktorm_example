@@ -6,7 +6,7 @@ plugins {
     application
     kotlin("jvm") version "1.7.22"
     id("io.ktor.plugin") version "2.1.3"
-                id("org.jetbrains.kotlin.plugin.serialization") version "1.7.22"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.7.22"
 }
 
 group = "com.example"
