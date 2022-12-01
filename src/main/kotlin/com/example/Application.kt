@@ -14,12 +14,7 @@ fun main() {
 }
 
 fun Application.module() {
-    val database= Database.connect(
-        url="jdbc:mysql://localhost:3306/users",
-        driver = "com.mysql.cj.jdbc.Driver",
-        user="root",
-        password="1234"
-    )
+
 //    database.insert(User){
 //        set(it.name,"sameeksha")
 //        set(it.email,"sameeksha@gmail.com")
@@ -37,23 +32,23 @@ fun Application.module() {
 //    }
 
 
-    database.delete(User){
-        it.id eq 7
-    }
-    database.delete(User){
-        it.id eq 8
-    }
-    database.delete(User){
-        it.id eq 9
-    }
-    database.delete(User){
-        it.id eq 10
-    }
-    var users=database.from(User).select()
+//    database.delete(User){
+//        it.id eq 7
+//    }
+//    database.delete(User){
+//        it.id eq 8
+//    }
+//    database.delete(User){
+//        it.id eq 9
+//    }
+//    database.delete(User){
+//        it.id eq 10
+//    }
+//    var users=database.from(User).select()
 
-    for(row in users){
-        println("${row[User.id]}: ${row[User.name]}")
-    }
+//    for(row in users){
+//        println("${row[User.id]}: ${row[User.name]}")
+//    }
     configureSerialization()
     configureRouting()
 }
